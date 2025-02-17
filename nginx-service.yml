@@ -1,0 +1,20 @@
+apiVersion : apps/v1
+kind : Deployment 
+metadata : 
+  name : nginx
+spec :
+  selector :
+    matchLabels :
+      provider: k8s
+      env : prod 
+  template : 
+    metadata : 
+     labels :
+       provider: k8s
+       env : prod 
+    spec :
+     containers :
+     - name : nginx
+       image : nginx:lts
+       ports : 
+       - containerPort: 80
