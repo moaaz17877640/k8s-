@@ -17,6 +17,6 @@ spec :
     spec :
       containers :
         - name : test
-          image : nodejs-k8s:v1
+          image : moaaz17877640/nodejs-k8s:v1
           ports :
             - containerPort : 8080
