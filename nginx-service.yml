@@ -7,6 +7,7 @@ spec :
     matchLabels :
       provider: k8s
       env : prod 
+  replicas : 3
   template : 
     metadata : 
      labels :
@@ -15,6 +16,6 @@ spec :
     spec :
      containers :
      - name : nginx
-       image : nginx:lts
+       image : nginx:latest   
        ports : 
-       - containerPort: 80
+       - containerPort: 8080

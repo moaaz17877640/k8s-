@@ -7,6 +7,7 @@ spec :
     matchLabels :
       app : apache
       provider : k8s
+  replicas : 3
   template :
     metadata :
       labels :
@@ -17,4 +18,4 @@ spec :
         - name : apache
           image : httpd:2.4.39
           ports :
-            - containerPort : 80
+            - containerPort : 5000
