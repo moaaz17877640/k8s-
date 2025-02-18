@@ -19,4 +19,4 @@ spec :
         - name : test
           image : moaaz17877640/nodejs-k8s:v1
           ports :
-            - containerPort : 8080
+            - containerPort : 3000
