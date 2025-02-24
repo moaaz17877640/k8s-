@@ -27,7 +27,7 @@ spec:
         app: app2
     spec:
       containers:
-      - image: gcr.io/goole-samples/hello-app:1.0
+      - image: gcr.io/google-samples/hello-app:1.0
         imagePullPolicy: IfNotPresent
         name: hello-app
         resources: {}
