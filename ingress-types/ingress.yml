@@ -2,29 +2,32 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: simple-fanout-example
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx    # Add this line to specify the Ingress class
   rules:
-  - host: example.com
+  - host: elmahi.io
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: service1
+            name: app1
             port:
               number: 80
       - path: /app2
         pathType: Prefix
         backend:
           service:
-            name: service2
+            name: app2
             port:
               number: 8080
       - path: /app3
         pathType: Prefix
         backend:
           service:
-            name: service3
+            name: app3
             port:
               number: 8080

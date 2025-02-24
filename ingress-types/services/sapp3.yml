@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2025-02-24T11:46:14Z"
+  labels:
+    app: app3
+  name: app3
+  namespace: default
+  resourceVersion: "359074"
+  uid: be8febf9-3ce2-46d6-bdb5-83e6ecf64ec7
+spec:
+  clusterIP: 10.96.91.235
+  clusterIPs:
+  - 10.96.91.235
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30427
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: app3
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
