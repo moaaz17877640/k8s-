@@ -33,7 +33,7 @@ This project involves deploying and managing a Node.js application using Kuberne
 3. Access the application on port 3000.
 
 ### Configuration
-To change the port, modify the deployment and service files in the `k8s-service` folder and rebuild the Docker image.
+To change the port, modify the deployment and service files in the `k8s-recap-service` folder and rebuild the Docker image.
 
 ## Contributing
 1. Fork the repository.
